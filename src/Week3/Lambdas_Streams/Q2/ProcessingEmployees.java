@@ -233,9 +233,28 @@ public class ProcessingEmployees
         System.out.printf("Create an infinite stream of even numbers (0, 2, 4, …) (limit 20): %s%n",
                 infiniteNumbers
                         .limit(20)
+                        .mapToDouble(e-> e)
                         .boxed()
                         .collect(Collectors.toList()));
 
+        List<String> arr  =new ArrayList<>();
+        arr.add("Mdsf");
+        arr.add("Lkfjds");
+        arr.add("Hkdfs");
+        arr.add("Haklfd");
+        arr.add("Dfie");
+        arr.add("Deei");
+        arr.add("Aaaa");
+
+        System.out.println(arr);
+        System.out.println(arr.stream().sorted((a,b) -> {
+            if(a.startsWith("D")) return -2;
+            else if(a.startsWith("H"))return -1;
+            else return 1;
+        }).toList());
+
+
     } // end main
+
 } // end class ProcessingEmployees
 
