@@ -18,7 +18,6 @@ public class Main {
             }
             return emps;
         };
-
         Consumer<List<Employee>> calculateTotalSalary = (l) ->{
            double total = l.stream()
                     .mapToDouble(Employee::getSalary)
@@ -31,6 +30,8 @@ public class Main {
                     .sum();
             System.out.printf("Total salary: %,.2f%n", total);
         };
+
+        String name = "";
 
         BiConsumer<Consumer<List<Employee>>, List<Employee>> getTimePerfromance = (c, list) -> {
             int startTime = LocalTime.now().getNano() / 1_000_000;

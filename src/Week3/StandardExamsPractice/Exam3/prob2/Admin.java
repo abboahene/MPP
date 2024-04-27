@@ -1,4 +1,4 @@
-package prob2;
+package Week3.StandardExamsPractice.Exam3.prob2;
 
 import java.util.List;
 

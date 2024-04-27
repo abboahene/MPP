@@ -8,6 +8,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class ProcessingEmployees
 {
@@ -176,6 +177,32 @@ public class ProcessingEmployees
         departmentEmployees.forEach((department, employee) ->
                 System.out.printf("%-20s %s%n", department, employee)
         );
+
+        String me = "sjl";
+        char you = 'c';
+        me = me + you;
+
+
+        System.out.println(me + you + "flkjsdlkjflkdsjlfkjdslkfjsdl");
+
+        System.out.printf("Average: %s%n",
+                Stream.of("Ma", "Aaa", "Bjlfdjs", "Lfjds", "Lafd", "Lz", "Laa")
+                        .sorted((a,b)-> {
+                            if(a.startsWith("L") && b.startsWith("L")){
+                                    return a.compareTo(b);
+                            }
+                            else if(a.startsWith("L"))
+                            {
+                                return -1;
+                            }
+                            else if(b.startsWith("L"))
+                            {
+                                return 1;
+                            }
+                            else{
+                                return 0;
+                            }
+                        }).toList());
 
     } // end main
 } // end class ProcessingEmployees

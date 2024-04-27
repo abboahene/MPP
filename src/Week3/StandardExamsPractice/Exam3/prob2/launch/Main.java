@@ -1,10 +1,8 @@
-package prob2.launch;
+package Week3.StandardExamsPractice.Exam3.prob2.launch;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import prob2.*;
 
 /** This class tests the code package */
 public class Main {
